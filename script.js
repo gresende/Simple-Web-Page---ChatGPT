@@ -16,6 +16,9 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   
   // Clear error message if previously shown
   emailInput.classList.remove('error');
+  
+  // Redirect to product list page
+  window.location.href = 'products.html';
 });
 
 function validateEmail(email) {
