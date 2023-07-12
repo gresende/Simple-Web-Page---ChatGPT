@@ -22,19 +22,19 @@ document.addEventListener('DOMContentLoaded', function() {
   
       // Simulate email sending
       const recoveryEmail = emailInput.value;
-      showPopup(`Recovery email sent to ${recoveryEmail}`);
+      showToast(`Recovery email sent to ${recoveryEmail}`);
       emailInput.value = '';
       confirmButton.disabled = true;
     });
   
-    function showPopup(message) {
-      const popup = document.createElement('div');
-      popup.className = 'popup';
-      popup.textContent = message;
-      document.body.appendChild(popup);
+    function showToast(message) {
+      const toast = document.createElement('div');
+      toast.className = 'toast';
+      toast.textContent = message;
+      document.body.appendChild(toast);
   
       setTimeout(function() {
-        popup.remove();
+        toast.remove();
       }, 3000);
     }
   
